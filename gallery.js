@@ -64,8 +64,8 @@ const gallery = (function () {
     function stopZoom(){
         ZOOMED_IMAGE_DIV.style.display="none"
         //Oprydning og rengøring
-        FOCUSED_IMAGE.removeEventListener("mousemove")
-        FOCUSED_IMAGE.removeEventListener("mouseout")
+        FOCUSED_IMAGE.removeEventListener("mousemove", move)
+        FOCUSED_IMAGE.removeEventListener("mouseout", stopZoom)
     }
 
     function init (images = []){
