@@ -1,0 +1,54 @@
+/*RESETS*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/**/
+
+.gallery__container{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    position: relative; /*VIGTIGT*/
+}
+.gallery__container img{
+    display: block;
+}
+.gallery__focusedImage {
+    height:300px;
+    width:auto;
+    margin-bottom: 1em;
+}
+.gallery__thumbnails {
+    display:flex;
+    gap: 1em;
+}
+.gallery__button{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+}
+.gallery__thumbnail{
+    height:75px;
+    width:auto;
+}
+
+.gallery__zoomedImageContainer{
+    width:300px;
+    height:300px;
+    /*Hvis forældre elementet er position relative 
+    kan vi nemt positionere et absolut positioned child element */
+    position:absolute;
+    top:0;
+    right:0;
+    overflow: hidden; /*VIGTIGT*/
+}
+
+.gallery__zoomedImage{
+    height:300px;
+    width:auto;
+    transform:scale(2)
+}
